@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pandemia2020"
+    }
+  },
+  "defaultProject": "pandemia2020",
+  "cli": {
+    "analytics": false
+  }
 }
