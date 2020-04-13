@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "spec": false
         }
       },
       "root": "",
@@ -28,9 +29,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"             ]
           },
           "configurations": {
             "production": {
@@ -68,6 +72,7 @@
           "options": {
             "browserTarget": "pandemia2020:build"
           },
+
           "configurations": {
             "production": {
               "browserTarget": "pandemia2020:build:production"
@@ -94,7 +99,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
