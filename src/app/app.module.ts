@@ -5,14 +5,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './shared/components/login/login.component';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { AboutComponent } from './shared/components/about/about.component';
-import { HomeComponent } from './shared/components/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './shared/components/register/register.component';
 import { environment } from 'src/environments/environment';
 
 import * as firebase from "firebase/app";
 import "firebase/auth";
+import { UserModule } from './modules/user/user.module';
+import { DefaultLayoutComponent } from './shared/components/layouts/default-layout/default-layout.component';
+import { AboutComponent } from './about/about.component';
 
 
 firebase.initializeApp(environment.firebaseConfig);
@@ -21,15 +22,16 @@ firebase.initializeApp(environment.firebaseConfig);
   declarations: [
     AppComponent,
     LoginComponent,
-    HeaderComponent,
-    AboutComponent,
     HomeComponent,
     RegisterComponent,
+    DefaultLayoutComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    UserModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
